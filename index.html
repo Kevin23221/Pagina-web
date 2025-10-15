@@ -1,58 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Moderna</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ---------- ESTILOS GENERALES ---------- */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f4ff, #ffffff);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* ---------- NAVBAR ---------- */
+        .navbar {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: #0d6efd !important;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #333 !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #0d6efd !important;
+        }
+
+        .btn-outline-success {
+            border-color: #0d6efd;
+            color: #0d6efd;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+        /* ---------- CAROUSEL ---------- */
+        .carousel-item img {
+            height: 80vh;
+            object-fit: cover;
+            filter: brightness(75%);
+            transition: transform 1.5s ease;
+        }
+
+        .carousel-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            text-align: left;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+            animation: fadeInUp 1s ease;
+        }
+
+        .carousel-caption h5 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .carousel-caption p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background-color: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
 
     <!--------- NAV BAR --------->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="#">Bienvenido</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navegación</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Pagina</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Proyectos</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Más</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Contacto</a></li>
+                            <li><a class="dropdown-item" href="#">Sobre nosotros</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex ms-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
 
-    <!--------CAROUSEL --------->
-
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <!-------- CAROUSEL --------->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin-top: 70px;">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -61,31 +163,52 @@
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                 aria-label="Slide 3"></button>
         </div>
+
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/imagenes/img-1.jpg" class="d-block w-100" alt="...">
+                <img src="imagenes/img-1.jpg" class="d-block w-100" alt="Paisaje 1">
+                <div class="carousel-caption">
+                    <h5>Bienvenido a tu nueva experiencia</h5>
+                    <p>Explora el mundo con una vista moderna y fresca. Diseño limpio, funcional y atractivo.</p>
+                </div>
             </div>
+
             <div class="carousel-item">
-                <img src="imagenes/img-2.jpg" class="d-block w-100" alt="...">
+                <img src="imagenes/img-2.jpg" class="d-block w-100" alt="Paisaje 2">
+                <div class="carousel-caption">
+                    <h5>Plan de viaje</h5>
+                    <p>Menos es más. Cada detalle cuenta para ofrecerte la mejor experiencia.</p>
+                </div>
             </div>
+
             <div class="carousel-item">
-                <img src="imagenes/img-3.avif" class="d-block w-100" alt="...">
+                <img src="imagenes/img-3.avif" class="d-block w-100" alt="Paisaje 3">
+                <div class="carousel-caption">
+                    <h5>¡Viaja a todo el mundo!</h5>
+                    <p>Perfecto para sitios turisticos.</p>
+                </div>
             </div>
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Anterior</span>
         </button>
+
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Siguiente</span>
         </button>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+
+    <!-------- FOOTER --------->
+    <footer>
+        <p>© 2025 Mi Sitio Web | Diseñado por <a href="#">Kevin Guacaneme</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
