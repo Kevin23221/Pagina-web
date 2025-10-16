@@ -5,119 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Moderna</title>
+    <link rel="stylesheet" href="main.css"/>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        /* ---------- ESTILOS GENERALES ---------- */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f0f4ff, #ffffff);
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        /* ---------- NAVBAR ---------- */
-        .navbar {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .navbar-brand {
-            font-weight: 700;
-            color: #0d6efd !important;
-            letter-spacing: 1px;
-        }
-
-        .nav-link {
-            font-weight: 500;
-            color: #333 !important;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #0d6efd !important;
-        }
-
-        .btn-outline-success {
-            border-color: #0d6efd;
-            color: #0d6efd;
-        }
-
-        .btn-outline-success:hover {
-            background-color: #0d6efd;
-            color: white;
-        }
-
-        /* ---------- CAROUSEL ---------- */
-        .carousel-item img {
-            height: 80vh;
-            object-fit: cover;
-            filter: brightness(75%);
-            transition: transform 1.5s ease;
-        }
-
-        .carousel-item img:hover {
-            transform: scale(1.05);
-        }
-
-        .carousel-caption {
-            position: absolute;
-            bottom: 20%;
-            left: 10%;
-            text-align: left;
-            color: #fff;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-            animation: fadeInUp 1s ease;
-        }
-
-        .carousel-caption h5 {
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        .carousel-caption p {
-            font-size: 1.2rem;
-            max-width: 600px;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* ---------- FOOTER ---------- */
-        footer {
-            background-color: #0d6efd;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -147,7 +42,7 @@
                 </ul>
                 <form class="d-flex ms-3" role="search">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
                 </form>
             </div>
         </div>
@@ -202,6 +97,76 @@
             <span class="visually-hidden">Siguiente</span>
         </button>
     </div>
+
+    <!-------- SECCION DE INFO --------->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col">
+                <img src="imagenes/img-4.webp" class="img-fluid rounded" alt="Imagen de asesoramiento de viajes">
+                </div>
+                <div class="col">
+                Ahorrar tiempo y dinero en la planificación de tus viajes nunca ha sido tan fácil. Nuestro equipo de 
+                expertos en viajes está aquí para ayudarte a diseñar la experiencia perfecta, adaptada a tus gustos y 
+                presupuesto. Ya sea que busques una escapada relajante, una aventura llena de acción o un viaje cultural 
+                enriquecedor, tenemos las herramientas y el conocimiento para hacer que tu próximo viaje sea inolvidable.
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-------- ASESORAMIENTO DE VIAJES --------->
+
+    <section class="py-5 bg-light" id="asesoria">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Asesoría en Viajes Personalizada</h2>
+                <p class="text-muted">Te ayudamos a planear la mejor experiencia de viaje, adaptada a tus gustos y presupuesto.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="mb-3">
+                            <i class="bi bi-globe-americas fs-1 text-primary"></i>
+                        </div>
+                            <h5 class="fw-semibold">Destinos Internacionales</h5>
+                            <p class="text-muted">Recibe asesoría sobre los mejores lugares para visitar alrededor del mundo, desde Europa hasta Asia y América.</p>
+                        </div>
+                </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100 text-center p-4">
+                    <div class="mb-3">
+                        <i class="bi bi-calendar-check fs-1 text-primary"></i>
+                    </div>
+                    <h5 class="fw-semibold">Planificación de Itinerarios</h5>
+                    <p class="text-muted">Organizamos tus actividades y tiempos para que aproveches cada minuto del viaje sin preocupaciones.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100 text-center p-4">
+                    <div class="mb-3">
+                        <i class="bi bi-people fs-1 text-primary"></i>
+                    </div>
+                    <h5 class="fw-semibold">Viajes en Grupo o Individuales</h5>
+                    <p class="text-muted">Ya sea una escapada romántica, un viaje familiar o una aventura con amigos, personalizamos tu experiencia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" id="contacto">
+    <div class="container text-center">
+        <h3 class="fw-bold mb-4">¿Listo para tu próxima aventura?</h3>
+        <p class="text-muted mb-4">Nuestros asesores están disponibles para ayudarte a crear un viaje inolvidable. Contáctanos y recibe tu primera consulta gratuita.</p>
+        <a href="#" class="btn btn-primary btn-lg px-4">Contáctanos</a>
+    </div>
+</section>
 
     <!-------- FOOTER --------->
     <footer>
